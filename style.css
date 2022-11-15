@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --my-font1: 'Roboto', sans-serif;
+    --my-font2: 'Dancing Script', cursive;
+    --btn-color:#f07c3a;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 12vh;
+    position: fixed;
+    width: 100%;
+}
+nav.changeBg{
+    background-color: white;
+    transition: 450ms ease-in-out;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 32%;
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-family: var(--my-font1);
+    color:  black;
+    font-weight: bold;
+    position: relative;
+    font-size: 1.1rem;
+}
+nav ul li a::after{
+  content: "";
+  position: absolute;
+  background-color: var(--btn-color);
+  height: 2px;
+  width: 0%;
+  top: 110%;
+  left: 0%;
+  transition: 450ms ease-in-out;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.app-btn{
+    padding: .8rem;
+    border: none;
+    background-color: var(--btn-color);
+    color: white;
+    font-weight: bold;
+    border-radius: .4rem;
+}
+.app-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.app-btn:hover{
+    transform: scale(1.1);
+    transition: 450ms ease-in-out;
+    cursor: pointer;
+}
+
+
+/* ------------------------------------------hero section */
+.hero-container{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.1), rgba(0,0,0,0.8)),url('https://149410494.v2.pressablecdn.com/wp-content/uploads/2020/03/meat-burger-with-salad-cheese-tomato-and-ketchup-KRH2A48-1200x600.jpg');
+    height: 90vh;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-attachment: fixed;
+} 
+
+.hero-heading{
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    font-family: var(--my-font1);
+    font-size: 5rem;
+}
+
+.hero-desc{
+    color: white;
+    font-weight: bold;
+    font-family: var(--my-font1);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.recipies-img{
+    border-radius: 50%;
+    width: 10rem;
+}
+
+.all-recipies{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
+    margin: 3rem auto;
+    width: 90vw;
+    max-width: 1100px;
+    place-items: center;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    text-align: center;
+}
+
+.recipies-container{
+    margin-top: 4rem;
+    min-height: 70vh;
+}
+
+.recipies-1{
+    margin-left: 1rem;
+}
+.recipies-img:hover{
+    transform: rotateZ(10deg);
+    transition: 450ms ease-in-out;
+    cursor: pointer;
+    background-color: #eaeaea;
+}
+
+.recipes-name{
+    margin-top: 1rem;
+    font-family: var(--my-font1);
+    font-weight: bold;
+
+}
+.category-head{
+    font-family: var(--my-font2);
+    color: #f07c3a;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.Recipies-heading{
+    font-size: 4rem;
+    font-weight: bolder;
+    font-family: var(--my-font1);
+    text-align: center;
+}
+
+
+
+.latest_recipies_container{
+    background-color: #eaeaea;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.recipie-img{
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.card-1{
+    width: 22rem;
+    cursor: pointer;
+}
+
+.card-desc{
+    padding: 1rem;
+    box-shadow: 0px 0px 15px 11px rgba(0,0,0,0.1);
+}
+
+.name-recpies{
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: var(--my-font1);
+}
+
+.recipie-author-name{
+    font-weight: 400;
+    font-family: var(--my-font1);
+    margin-top: .4rem;
+}
+
+.cooking-tips{
+    margin-top: .4rem;
+    font-weight: 700;
+    font-family: var(--my-font1);
+}
+
+.headings-container{
+ text-align: center;
+ padding: 4rem 4rem;
+}
+
+.recent-recipies{
+    font-family: var(--my-font2);
+    color: #f07c3a;
+    font-size: 2rem;
+}
+.latest{
+    font-family: var(--my-font1);
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.recipies-card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    margin: 0 auto;
+    width: 90vw;
+    max-width: 1180px;
+    place-content: center;
+    grid-column-gap: 50px;
+    grid-row-gap: 30px;
+}
+
+.menu-bar{
+    display: none;
+    font-size: 1.5rem;
+}
+
+.footer-container{
+    background-image: url('https://149410494.v2.pressablecdn.com/wp-content/uploads/2020/03/footer.jpg');
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-left{
+    width: 25%;
+}
+
+.subscribe-heading{
+    color: white;
+    font-weight: bold;
+    font-family: var(--my-font1);
+    font-size: 1.4rem;
+}
+
+.head-line{
+    margin-top: 1rem;
+    color: grey;
+    font-weight: bold;
+}
+
+.subscribe-input-form{
+    margin-top: .6rem;
+}
+
+.signup-btn{
+    padding: 1rem;
+    background-color: orange;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-family: var(--my-font1);
+}
+
+.subs-form{
+    padding: .7rem;
+    border: none;
+}
+
+.links-head{
+    color: white;
+    font-weight: bold;
+    font-family: var(--my-font1);
+    font-size: 1.4rem;
+}
+
+.contact-head{
+    color: white;
+    font-weight: bold;
+    font-family: var(--my-font1);
+    font-size: 1.4rem;
+}
+
+.links-more{
+    list-style: none;
+}
+.links-more li{
+    margin-top: .6rem;
+}
+.links-more li a{
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+}
+.uni-name{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.location-logo{
+    color: orange;
+}
+
+.project-auth{
+    margin-left: 1rem;
+    color: gray;
+}
+/* --media query  */
+@media screen and (min-width:300px) and (max-width:768px){
+    .recipies-card-container{
+       display: grid;
+       place-items: center;
+    }
+}
+@media screen and (min-width:300px) and (max-width:668px){
+    .footer-container{
+        display: block;
+        margin-top: 3rem;
+        padding: 2rem;
+        height: 100vh;
+    }
+
+    .left-footer-part{
+        width: 100%;
+    }
+
+    .middle-footer{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .right-footer-part{
+      margin-top: 2rem;
+      width: 100%;
+    }
+}
+@media screen and (min-width:300px) and (max-width:988px){
+    .menu-bar{
+        display: block;
+    }
+    nav .list{
+        position: absolute;
+        background-color: white;
+        top: 100%;
+        display: block;
+        height: 50vh;
+        width: 100%;
+        text-align: center;
+        right: -100%;
+        transition: all 0.4s ease-in-out;
+    }
+
+    nav ul li{
+        margin-top: 2rem;
+    }
+    .app-btn{
+        margin-top: 1rem;
+    }
+}
+
+/* 
+
+the make from the best from the best and giving to you and giving yourself and towards */
