@@ -76,10 +76,36 @@ nav ul li a:hover::after{
     cursor: pointer;
 }
 
+.check-more-btn{
+    padding: .8rem;
+    border: none;
+    background-color: var(--btn-color);
+    color: white;
+    font-weight: bold;
+    border-radius: .4rem;
+    margin-top: 3rem;
+}
+.check-more-btn a{
+    text-decoration: none;
+    color: white;
+}
+.check-more-btn:hover{
+    transform: scale(1.1);
+    transition: 450ms ease-in-out;
+    cursor: pointer;
+}
+
+.bottom-border{
+    background-color: rgb(78, 78, 78);
+    padding: 1.5rem;
+    color: white;
+    font-family: var(--my-font1);
+    text-align: center;
+}
 
 /* ------------------------------------------hero section */
 .hero-container{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.1), rgba(0,0,0,0.8)),url('https://149410494.v2.pressablecdn.com/wp-content/uploads/2020/03/meat-burger-with-salad-cheese-tomato-and-ketchup-KRH2A48-1200x600.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url('https://149410494.v2.pressablecdn.com/wp-content/uploads/2020/03/meat-burger-with-salad-cheese-tomato-and-ketchup-KRH2A48-1200x600.jpg');
     height: 90vh;
     background-repeat: no-repeat;
     width: 100%;
@@ -331,18 +357,18 @@ nav ul li a:hover::after{
         padding: 2rem;
         height: 100vh;
     }
-
-    .left-footer-part{
+    .footer-left{
         width: 100%;
     }
-
-    .middle-footer{
-        width: 100%;
+    
+    .footer-mid{
         margin-top: 2rem;
     }
-    .right-footer-part{
-      margin-top: 2rem;
-      width: 100%;
+    .footer-right{
+        margin-top: 2rem;
+    }
+    .bottom-border{
+        text-align: left;
     }
 }
 @media screen and (min-width:300px) and (max-width:988px){
@@ -368,6 +394,10 @@ nav ul li a:hover::after{
         margin-top: 1rem;
     }
 }
+
+/* 
+
+the make from the best from the best and giving to you and giving yourself and towards */
 
 /* 
 
